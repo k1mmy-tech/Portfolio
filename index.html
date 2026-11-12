@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Back</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700;800&family=Anton&family=Fredoka:wght@500;600&family=Idiqlat:wght@400&family=Kreon:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+    <!-- ================= VIEW 1 : LOGIN ================= -->
+    <main class="view-login" id="login-view">
+        <div class="bg"></div>
+
+        <form class="card" id="login-form">
+            <h1>Welcome Back</h1>
+
+            <div class="field">
+                <label for="email">E-mail Address</label>
+                <input id="email" type="email" placeholder="Enter your email">
+            </div>
+
+            <div class="field">
+                <label for="password">Password</label>
+                <input id="password" type="password" placeholder="Enter your password">
+            </div>
+
+            <button type="submit">Sign in</button>
+        </form>
+    </main>
+
+    <!-- ================= VIEW 2 : HOME ================= -->
+    <div class="view-home" id="home-view" hidden>
+        <nav>
+            <a href="https://www.canva.com/design/DAHXfB2Y4jk/0fYYS6cXng9gwZ77uEdYzQ/edit" target="_blank" rel="noopener noreferrer">About Me</a>
+            <a href="#blogs">Blogs</a>
+            <a href="#services">Services</a>
+            <span class="follow">Follow me on</span>
+            <div class="socials">
+                <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" aria-label="Email">
+                    <svg viewBox="0 0 48 48"><path fill="#fff" d="M2 8h8l14 13L38 8h8v32h-8V19L24 32 10 19v21H2z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/" aria-label="Instagram">
+                    <svg viewBox="0 0 48 48"><rect width="48" height="48" rx="12" fill="#fff"/><circle cx="24" cy="24" r="10" fill="none" stroke="#ffa6c9" stroke-width="4.5"/><circle cx="36" cy="12" r="2.8" fill="#ffa6c9"/></svg>
+                </a>
+                <a href="https://www.facebook.com/1yincai" aria-label="Facebook">
+                    <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#fff"/><path fill="#ffa6c9" d="M26 42V28h5l1-6h-6v-3.500c0-1.800.7-3 3-3h3.200V10.200C31.600 10.100 29.800 10 28 10c-4.600 0-7.500 2.800-7.500 7.800V22H15.500v6h5V42z"/></svg>
+                </a>
+            </div>
+        </nav>
+
+        <header>
+            <h1>Tan,Kimberly Lauren S.</h1>
+            <div class="school">
+                <span>Philippine cultural college-Main</span>
+                <span>Grade 12- ABM</span>
+            </div>
+        </header>
+
+        <section class="band">
+            <p>
+                A Grade 12 ABM student currently doing my student internship in the IT
+                department here at Phoenix Publishing House. While my strand focuses on
+                business and management, I am very interested in how technology drives
+                corporate operations. I’m excited to learn how the IT department supports
+                the publishing business and look forward to contributing to the team.
+            </p>
+
+            <div class="photo">
+                <img src="./image/0.jpg" alt="Kimberly Lauren S. Tan">
+            </div>
+
+            <a class="more" href="#more">
+                <span class="arrow">
+                    <svg viewBox="0 0 24 24"><path fill="none" stroke="#ffa6c9" stroke-width="3.500" stroke-linecap="round" stroke-linejoin="round" d="M4 12h15M13 6l6 6-6 6"/></svg>
+                </span>
+                More About Me
+            </a>
+        </section>
+    </div>
+
+    <!-- ================= VIEW 3 : MORE ABOUT ME ================= -->
+    <div class="view-more" id="more-view" hidden>
+
+        <header class="hero">
+            <a class="back" href="#home" aria-label="Back to home">
+                <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3.500" stroke-linecap="round" stroke-linejoin="round" d="M20 12H5M11 6l-6 6 6 6"/></svg>
+                Back
+            </a>
+
+            <div>
+                <h1>Tan,Kimberly Lauren</h1>
+                <p>IT Student-Intern at Phoenix Publishing House</p>
+            </div>
+        </header>
+
+        <section>
+            <span class="pill">Hobbies</span>
+            <p class="copy">
+                Outside of my academic responsibilities, my biggest passion is sports, particularly
+                volleyball. As the captain of our sportsfest volleyball team, I lead my teammates
+                through strategy, motivation, and on-court collaboration. Being a team captain has
+                taught me how to handle pressure, communicate effectively under stress, and unite a
+                diverse group of people toward a shared goal.
+            </p>
+
+            <div class="gallery">
+                <div class="hobbies">
+                    <div class="track" id="hobbies-track">
+                        <figure style="--w:.75"><img src="./image/vball3.jpg" alt="Volleyball court"></figure>
+                        <figure style="--w:1"><img src="./image/vball2.jpg" alt="Volleyball team"></figure>
+                        <figure style="--w:1"><img src="./image/vball1.jpg" alt="Playing volleyball"></figure>
+                        <figure style="--w:1"><img src="./image/vball4.jpg" alt="Volleyball photo 4"></figure>
+                        <figure style="--w:1"><img src="./image/vball5.jpg" alt="Volleyball photo 5"></figure>
+                        <figure style="--w:1"><img src="./image/vball6.jpg" alt="Volleyball photo 6"></figure>
+                    </div>
+                </div>
+
+                <button class="next" id="hobbies-next" type="button" aria-label="Next photo">
+                    <svg viewBox="0 0 24 24"><path fill="none" stroke="#2b2226" stroke-width="3.500" stroke-linecap="round" stroke-linejoin="round" d="M4 12h15M13 6l6 6-6 6"/></svg>
+                </button>
+            </div>
+        </section>
+
+        <section>
+            <span class="pill">Achievements</span>
+            <p class="copy">
+                Demonstrating strong leadership, public speaking, and cultural diplomacy, I had the
+                privilege of serving as a representative in both the Ms. PCC and Ms. UN platforms.
+            </p>
+
+            <div class="ach-top">
+                <div class="tall">
+                    <p class="cap">MS.UN 2026</p>
+                    <figure><img src="./image/MSUN.jpeg" alt="Ms. UN 2026"></figure>
+                </div>
+                <div class="tall">
+                    <p class="cap">MS.PCC 2026</p>
+                    <figure><img src="./image/MSPCC.jpeg" alt="Ms. PCC 2026"></figure>
+                </div>
+                <div class="stack">
+                    <div>
+                        <p class="cap">MR &amp; MS.PCC 2026</p>
+                        <figure><img src="./image/MRMS.jpeg" alt="Mr. and Ms. PCC 2026"></figure>
+                    </div>
+                    <figure><img src="./image/group photo.jpg" alt="Group photo"></figure>
+                </div>
+            </div>
+
+            <div class="ach-bottom">
+                <div>
+                    <p class="cap">TAOKE BUSINESS SUMMIT YEAR 4</p>
+                    <figure><img src="./image/taoke.jpg" alt="Taoke Business Summit Year 4"></figure>
+                </div>
+                <div>
+                    <p class="cap">Senior High School Day: Lightning Talk</p>
+                    <figure><img src="./image/lightning talk.jpg" alt="Senior High School Day lightning talk"></figure>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <span class="pill">Work Experience</span>
+            <div class="work-row a">
+                <figure><img src="./image/work1.jpg" alt="Work experience 1"></figure>
+                <figure><img src="./image/work2.jpg" alt="Work experience 2"></figure>
+                <figure><img src="./image/work3.jpg" alt="Work experience 3"></figure>
+            </div>
+            <div class="work-row b">
+                <figure><img src="./image/work4.jpg" alt="Work experience 4"></figure>
+                <figure><img src="./image/work5.jpg" alt="Work experience 5"></figure>
+                <figure><img src="./image/work6.jpg" alt="Work experience 6"></figure>
+            </div>
+        </section>
+
+        <!-- ===== LIGHTBOX ===== -->
+        <div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+            <button class="lb-btn lb-close" type="button" aria-label="Close">
+                <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+            </button>
+
+            <div class="lb-tools">
+                <button class="lb-btn" id="lb-out" type="button" aria-label="Zoom out">
+                    <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12h14"/></svg>
+                </button>
+                <span id="lb-pct">100%</span>
+                <button class="lb-btn" id="lb-in" type="button" aria-label="Zoom in">
+                    <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M5 12h14M12 5v14"/></svg>
+                </button>
+            </div>
+
+            <button class="lb-btn lb-prev" id="lb-prev" type="button" aria-label="Previous photo">
+                <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></svg>
+            </button>
+            <button class="lb-btn lb-next" id="lb-next" type="button" aria-label="Next photo">
+                <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </button>
+
+            <div class="lb-stage"><img id="lb-img" alt=""></div>
+            <p class="lb-cap" id="lb-cap"></p>
+        </div>
+
+    </div>
+
+    <script>
+        const loginView = document.getElementById("login-view");
+        const homeView  = document.getElementById("home-view");
+        const moreView  = document.getElementById("more-view");
+
+        const views  = { login: loginView, home: homeView, more: moreView };
+        const titles = { login: "Welcome Back", home: "Kimberly Lauren S. Tan", more: "More About Me" };
+        const routes = { "": "login", "#home": "home", "#more": "more" };
+
+        function show(name) {
+            for (const key in views) views[key].hidden = key !== name;
+            document.title = titles[name];
+            window.scrollTo(0, 0);
+        }
+
+        // Sign in -> home
+        document.getElementById("login-form").addEventListener("submit", (e) => {
+            e.preventDefault();
+            history.pushState({}, "", "#home");
+            show("home");
+        });
+
+        // "More About Me" link (#more), back/forward buttons, other # links
+        window.addEventListener("popstate", () => {
+            const name = routes[location.hash];
+            if (name) show(name);
+        });
+
+        // On first load / refresh, open the page that matches the URL
+        show(routes[location.hash] || "login");
+
+
+        // ---------- Hobbies slider ----------
+        const hobbiesTrack = document.getElementById("hobbies-track");
+        const hobbiesNext  = document.getElementById("hobbies-next");
+        let hobbiesSliding = false;
+
+        hobbiesNext.addEventListener("click", () => {
+            if (hobbiesSliding || hobbiesTrack.children.length < 2) return;
+            hobbiesSliding = true;
+
+            const first = hobbiesTrack.firstElementChild;
+            const gap = parseFloat(getComputedStyle(hobbiesTrack).columnGap) || 0;
+            const distance = first.getBoundingClientRect().width + gap;
+
+            hobbiesTrack.appendChild(first.cloneNode(true));
+            void hobbiesTrack.offsetWidth;
+
+            const finish = () => {
+                hobbiesTrack.classList.remove("sliding");
+                hobbiesTrack.style.transform = "";
+                first.remove();
+                hobbiesSliding = false;
+            };
+
+            if (matchMedia("(prefers-reduced-motion: reduce)").matches) { finish(); return; }
+
+            hobbiesTrack.classList.add("sliding");
+            hobbiesTrack.style.transform = `translateX(-${distance}px)`;
+            setTimeout(finish, 460);
+        });
+
+
+        // ---------- Lightbox ----------
+        const lb     = document.getElementById("lightbox");
+        const lbImg  = document.getElementById("lb-img");
+        const lbCap  = document.getElementById("lb-cap");
+        const lbPct  = document.getElementById("lb-pct");
+        let lbList = [], lbIndex = 0, lbScale = 1, lbX = 0, lbY = 0, lbDrag = null;
+
+        function lbApply() {
+            lbImg.style.setProperty("--s", lbScale);
+            lbImg.style.setProperty("--x", lbX + "px");
+            lbImg.style.setProperty("--y", lbY + "px");
+            lbImg.classList.toggle("zoomed", lbScale > 1);
+            lbPct.textContent = Math.round(lbScale * 100) + "%";
+        }
+
+        function lbZoom(value) {
+            lbScale = Math.min(4, Math.max(1, value));
+            if (lbScale === 1) { lbX = 0; lbY = 0; }
+            lbApply();
+        }
+
+        function lbShow(i) {
+            lbIndex = (i + lbList.length) % lbList.length;
+            const img = lbList[lbIndex];
+            lbImg.src = img.currentSrc || img.src;
+            lbImg.alt = img.alt;
+            lbCap.textContent = img.alt + "  ·  " + (lbIndex + 1) + " / " + lbList.length;
+            lbScale = 1; lbX = 0; lbY = 0;
+            lbApply();
+        }
+
+        function lbOpen(img) {
+            lbList = [...document.querySelectorAll("#more-view figure img")];
+            lbShow(lbList.indexOf(img));
+            lb.classList.add("open");
+            document.body.style.overflow = "hidden";
+            lb.querySelector(".lb-close").focus();
+        }
+
+        function lbClose() {
+            lb.classList.remove("open");
+            document.body.style.overflow = "";
+        }
+
+        // click any photo on the page
+        moreView.addEventListener("click", (e) => {
+            const img = e.target.closest("figure img");
+            if (img) lbOpen(img);
+        });
+
+        // buttons
+        lb.querySelector(".lb-close").addEventListener("click", lbClose);
+        document.getElementById("lb-prev").addEventListener("click", () => lbShow(lbIndex - 1));
+        document.getElementById("lb-next").addEventListener("click", () => lbShow(lbIndex + 1));
+        document.getElementById("lb-in").addEventListener("click", () => lbZoom(lbScale + 0.5));
+        document.getElementById("lb-out").addEventListener("click", () => lbZoom(lbScale - 0.5));
+
+        // click the dark background to close
+        lb.addEventListener("click", (e) => {
+            if (e.target === lb || e.target.classList.contains("lb-stage")) lbClose();
+        });
+
+        // click the photo to zoom in/out, drag to move it when zoomed
+        lbImg.addEventListener("pointerdown", (e) => {
+            lbDrag = { x: e.clientX, y: e.clientY, ox: lbX, oy: lbY, moved: false };
+            lbImg.setPointerCapture(e.pointerId);
+        });
+
+        lbImg.addEventListener("pointermove", (e) => {
+            if (!lbDrag) return;
+            const dx = e.clientX - lbDrag.x, dy = e.clientY - lbDrag.y;
+            if (Math.abs(dx) + Math.abs(dy) > 5) lbDrag.moved = true;
+            if (lbScale > 1 && lbDrag.moved) {
+                lbImg.classList.add("dragging");
+                lbX = lbDrag.ox + dx;
+                lbY = lbDrag.oy + dy;
+                lbApply();
+            }
+        });
+
+        lbImg.addEventListener("pointerup", () => {
+            if (lbDrag && !lbDrag.moved) lbZoom(lbScale > 1 ? 1 : 2.5);
+            lbDrag = null;
+            lbImg.classList.remove("dragging");
+        });
+
+        // mouse wheel zoom
+        lb.addEventListener("wheel", (e) => {
+            e.preventDefault();
+            lbZoom(lbScale + (e.deltaY < 0 ? 0.25 : -0.25));
+        }, { passive: false });
+
+        // keyboard
+        document.addEventListener("keydown", (e) => {
+            if (!lb.classList.contains("open")) return;
+            if (e.key === "Escape") lbClose();
+            else if (e.key === "ArrowRight") lbShow(lbIndex + 1);
+            else if (e.key === "ArrowLeft") lbShow(lbIndex - 1);
+            else if (e.key === "+" || e.key === "=") lbZoom(lbScale + 0.5);
+            else if (e.key === "-") lbZoom(lbScale - 0.5);
+        });
+
+        // close when the browser back button is used
+        window.addEventListener("popstate", lbClose);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,570 @@
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        [hidden] { display: none !important; }
+        body { min-height: 100vh; }
+
+        /* =====================================================
+           VIEW 1 : LOGIN
+           ===================================================== */
+        .view-login {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            font-family: "Roboto", sans-serif;
+            background: linear-gradient(#5fa84f, #2f7d3b);
+        }
+
+        .view-login .bg {
+            position: absolute;
+            inset: 0;
+            background: url("./image/background.jpg") center / cover no-repeat;
+        }
+
+        .card {
+            position: relative;
+            width: min(92vw, 335px);
+            padding: 62px 22px 26px;
+            border-radius: 40px;
+            background: rgba(255, 255, 255, 0.18);
+            border: 1.5px solid rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        }
+
+        .card h1 {
+            font-family: "Alegreya", Georgia, serif;
+            font-weight: 800;
+            font-size: 2.1rem;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .card label {
+            display: block;
+            font-family: "Alegreya", Georgia, serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            color: #fff;
+            margin: 0 0 6px 6px;
+        }
+
+        .card .field { margin-bottom: 14px; }
+
+        .card input {
+            width: 100%;
+            height: 30px;
+            padding: 0 12px;
+            border: none;
+            outline: none;
+            border-radius: 999px;
+            background: #f2f2f2;
+            font: 400 0.62rem "Roboto", sans-serif;
+            color: #333;
+            box-shadow: 0 3px 0 rgba(0, 0, 0, 0.12), inset 0 1px 2px rgba(255, 255, 255, 0.9);
+        }
+
+        .card input::placeholder {
+            color: #9a9a9a;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        .card input:focus-visible { box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.8); }
+
+        .card button {
+            display: block;
+            width: 88px;
+            height: 26px;
+            margin: 38px auto 0;
+            border: none;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.55);
+            color: #8d8d8d;
+            font: 700 0.8rem "Alegreya", Georgia, serif;
+            cursor: pointer;
+            box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
+        }
+
+        .card button:hover { background: rgba(255, 255, 255, 0.8); }
+        .card button:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+
+        /* =====================================================
+           VIEW 2 : HOME
+           ===================================================== */
+        .view-home {
+            --page: #ffd1dd;
+            --band: #ffa6c9;
+            --accent: #f4619d;
+            --ink: #3a2c36;
+            --white: #fff;
+
+            position: relative;
+            min-height: 100vh;
+            background: var(--page);
+            font-family: "Fredoka", sans-serif;
+            overflow-x: hidden;
+        }
+
+        .view-home a { color: inherit; text-decoration: none; }
+
+        /* ---------- top nav ---------- */
+        .view-home nav {
+            position: absolute;
+            top: 0;
+            right: 20px;
+            width: min(850px, calc(100% - 40px));
+            height: 55px;
+            padding: 0 18px 0 48px;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            background: var(--band);
+            border-radius: 0 0 22px 22px;
+            box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25);
+            color: var(--white);
+            font-size: 1.35rem;
+            font-weight: 500;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+        }
+
+        .view-home nav .follow { margin-left: auto; }
+        .view-home nav .socials { display: flex; align-items: center; gap: 18px; }
+        .view-home nav .socials svg { width: 46px; height: 46px; display: block; }
+
+        /* ---------- name ---------- */
+        .view-home header {
+            padding: 135px 20px 0;
+            height: 291px;
+        }
+
+        .view-home h1 {
+            font-family: "Anton", Impact, sans-serif;
+            font-weight: 400;
+            font-size: clamp(2.6rem, 7vw, 6.6rem);
+            line-height: 1;
+            text-transform: uppercase;
+            color: var(--accent);
+            text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.15);
+        }
+
+        .view-home .school {
+            display: flex;
+            gap: 55px;
+            margin: 6px 0 0 8px;
+            font-family: "Anton", Impact, sans-serif;
+            font-size: 1.45rem;
+            line-height: 1.1;
+            color: var(--ink);
+            text-transform: uppercase;
+        }
+
+        /* ---------- pink band ---------- */
+        .view-home .band {
+            position: relative;
+            height: 321px;
+            background: var(--band);
+            display: flex;
+            align-items: flex-start;
+            padding: 52px 0 0 10px;
+        }
+
+        .view-home .band p {
+            width: min(725px, 58%);
+            font-family: "Kreon", Georgia, serif;
+            font-weight: 700;
+            font-size: 1.50rem;
+            line-height: 1.5;
+            color: var(--white);
+        }
+
+        .view-home .photo {
+            position: absolute;
+            top: -84px;
+            right: 40px;
+            width: 458px;
+            height: 458px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .view-home .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* ---------- button ---------- */
+        .view-home .more {
+            position: absolute;
+            top: 388px;
+            right: 89px;
+            width: 337px;
+            height: 61px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding-left: 24px;
+            border-radius: 22px;
+            background: var(--band);
+            color: var(--white);
+            font-size: 1.9rem;
+            font-weight: 500;
+            box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25);
+            transition: transform 0.15s ease;
+        }
+
+        .view-home .more:hover { transform: translateY(-2px); }
+        .view-home .more:focus-visible,
+        .view-home nav a:focus-visible { outline: 3px solid var(--white); outline-offset: 3px; }
+
+        .view-home .more .arrow {
+            width: 33px;
+            height: 33px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: grid;
+            place-items: center;
+        }
+
+        .view-home .more .arrow svg { width: 17px; height: 17px; }
+
+        /* ---------- small screens ---------- */
+        @media (max-width: 900px) {
+            .view-home nav { position: static; width: 100%; border-radius: 0; padding: 10px 16px; gap: 14px; font-size: 1rem; flex-wrap: wrap; height: auto; }
+            .view-home nav .socials svg { width: 32px; height: 32px; }
+            .view-home header { height: auto; padding: 40px 20px 24px; }
+            .view-home .school { flex-direction: column; gap: 2px; font-size: 1.1rem; }
+            .view-home .band { height: auto; flex-direction: column; padding: 28px 16px 40px; gap: 28px; }
+            .view-home .band p { width: 100%; font-size: 1.1rem; }
+            .view-home .photo { position: static; width: min(80vw, 380px); height: min(80vw, 380px); align-self: center; }
+            .view-home .more { position: static; align-self: center; width: 300px; font-size: 1.5rem; }
+        }
+
+        /* =====================================================
+           VIEW 3 : MORE ABOUT ME (scrolls normally)
+           ===================================================== */
+        .view-more {
+            --page: #ffd1dd;
+            --band: #ffa6c9;
+            --accent: #f4619d;
+            min-height: 100vh;
+            background: var(--page);
+            font-family: "Alegreya", Georgia, serif;
+            color: #2b2226;
+            padding-bottom: 60px;
+        }
+
+        .view-more .hero {
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            min-height: clamp(260px, 44vw, 620px);
+            padding: 4vw;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.6)),
+                url("./image/hero page.jpg") center / cover no-repeat,
+                #6b5560;
+            color: #fff;
+        }
+
+        .view-more .hero h1 {
+            font-weight: 800;
+            font-size: clamp(1.6rem, 4.2vw, 3.6rem);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+
+      .view-more .hero p { font-size: clamp(0.85rem, 1.4vw, 1.2rem); font-weight: 500; margin-top: 4px; }
+
+/* back button on the hero */
+.view-more .back {
+    position: absolute;
+    top: 18px;
+    left: 32px;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px 8px 12px;
+    border-radius: 999px;
+    background: #ffa6c9;
+    color: #fff;
+    font: 600 16px "Fredoka", sans-serif;
+    text-decoration: none;
+}
+
+.view-more .back svg { width: 18px; height: 18px; }
+.view-more .back:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+        .view-more section { padding: 28px 4vw 0; }
+
+        .view-more .pill {
+            display: inline-block;
+            padding: 6px 24px;
+            border-radius: 999px;
+            background: var(--band);
+            color: #fff;
+            font: 500 clamp(1rem, 1.6vw, 1.4rem) "Fredoka", sans-serif;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+        }
+
+        .view-more .copy {
+            max-width: 1000px;
+            margin: 16px 0 18px 8px;
+            font-size: clamp(0.9rem, 1.25vw, 1.15rem);
+            line-height: 1.5;
+        }
+
+        .view-more figure {
+            position: relative;
+            overflow: hidden;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.45);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .view-more figure img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+        .view-more .cap {
+            margin-bottom: 8px;
+            text-align: center;
+            font-weight: 700;
+            font-size: clamp(0.8rem, 1.2vw, 1.1rem);
+            color: var(--accent);
+        }
+
+  /* ---------- Hobbies slider ---------- */
+.view-more .gallery { position: relative; }
+
+.view-more .hobbies {
+    --gap: 3.2vw;
+    overflow: hidden;
+    padding: 0 12px 12px 0;            /* room for the shadows */
+}
+
+.view-more .track { display: flex; gap: var(--gap); }
+.view-more .track.sliding { transition: transform 0.45s ease; }
+
+.view-more .track figure {
+    flex: 0 0 calc((100% - 2 * var(--gap)) * var(--w, 1) / 2.75);
+    height: clamp(160px, 18vw, 300px);
+    border: 6px solid #fff;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+.view-more .track img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.view-more .gallery .next {
+    position: absolute;
+    top: calc(50% - 6px);
+    right: 22px;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: #fff;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+    transition: transform 0.15s ease;
+}
+
+.view-more .gallery .next:hover { transform: translateY(-50%) scale(1.08); }
+.view-more .gallery .next svg { width: 22px; height: 22px; }
+
+/* ---------- Achievements: top row ---------- */
+.view-more .ach-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.8fr;
+    gap: 4vw;
+    align-items: start;
+    padding: 0 10px 12px 0;
+}
+
+.view-more .ach-top figure {
+    border: 6px solid #fff;
+    background: #fff;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+.view-more .ach-top .tall figure { aspect-ratio: 5 / 9; border-radius: 999px; }
+.view-more .ach-top .stack { display: grid; gap: 22px; }
+.view-more .ach-top .stack figure { border-radius: clamp(40px, 5vw, 80px); }
+.view-more .ach-top .stack > div:first-child figure { aspect-ratio: 1.9 / 1; }
+.view-more .ach-top .stack > figure { aspect-ratio: 2.2 / 1; }
+
+/* ---------- Achievements: bottom row ---------- */
+.view-more .ach-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 4vw;
+    margin-top: 22px;
+    padding: 0 10px 12px 0;
+}
+
+.view-more .ach-bottom figure {
+    aspect-ratio: 16 / 9;
+    border: 6px solid #fff;
+    background: #fff;
+    border-radius: clamp(40px, 5vw, 80px);
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- Image titles (Idiqlat) ---------- */
+.view-more .cap,
+.view-more .ach-top .cap,
+.view-more .ach-bottom .cap {
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: "Idiqlat", Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(0.95rem, 1.7vw, 1.6rem);
+    letter-spacing: 0.03em;
+    color: #d9558e;
+    -webkit-text-stroke: 0.6px currentColor;
+}
+
+/* ---------- Work experience ---------- */
+.view-more .work-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    padding: 0 8px 10px 0;
+}
+
+.view-more .work-row.a { margin-top: 40px; }
+.view-more .work-row.b { margin-top: 8px; }
+
+.view-more .work-row figure {
+    border: 5px solid #fff;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+.view-more .work-row.a figure { width: 74%; aspect-ratio: 4 / 3; }
+.view-more .work-row.b figure { width: 62%; aspect-ratio: 3 / 5; }
+
+.view-more .work-row figure:nth-child(1) { justify-self: start; }
+.view-more .work-row figure:nth-child(2) { justify-self: center; }
+.view-more .work-row figure:nth-child(3) { justify-self: end; }
+/* ---------- Lightbox ---------- */
+.view-more figure img { cursor: zoom-in; }
+
+.view-more .lb {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(25, 12, 20, 0.92);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s;
+}
+
+.view-more .lb.open { opacity: 1; visibility: visible; }
+
+.view-more .lb-stage {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.view-more .lb-stage img {
+    max-width: 90vw;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border: 6px solid #fff;
+    background: #fff;
+    transform: translate(var(--x, 0px), var(--y, 0px)) scale(var(--s, 1));
+    transition: transform 0.2s ease;
+    cursor: zoom-in;
+    user-select: none;
+    -webkit-user-drag: none;
+    touch-action: none;
+}
+
+.view-more .lb-stage img.zoomed { cursor: grab; }
+.view-more .lb-stage img.dragging { transition: none; cursor: grabbing; }
+
+.view-more .lb-btn {
+    position: absolute;
+    z-index: 2;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: #ffa6c9;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.view-more .lb-btn:hover { background: #f4619d; }
+.view-more .lb-btn:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+.view-more .lb-btn svg { width: 20px; height: 20px; }
+
+.view-more .lb-close { top: 18px; right: 20px; }
+.view-more .lb-prev { left: 20px; top: 50%; transform: translateY(-50%); }
+.view-more .lb-next { right: 20px; top: 50%; transform: translateY(-50%); }
+
+.view-more .lb-tools {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    font: 500 1rem "Fredoka", sans-serif;
+}
+
+.view-more .lb-tools .lb-btn { position: static; width: 38px; height: 38px; }
+.view-more .lb-tools span { min-width: 52px; text-align: center; }
+
+.view-more .lb-cap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 18px;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    font: 500 1rem "Alegreya", Georgia, serif;
+    padding: 0 70px;
+}
+
+/* ---------- Phones (keep this at the very end) ---------- */
+@media (max-width: 700px) {
+    .view-more .hobbies { --gap: 16px; }
+    .view-more .track figure { flex-basis: 100%; height: auto; aspect-ratio: 16 / 9; }
+
+    .view-more .ach-top,
+    .view-more .ach-bottom { grid-template-columns: 1fr; }
+    .view-more .ach-top .tall figure { width: 70%; margin: 0 auto; }
+
+    .view-more .work-row.a figure { width: 100%; justify-self: center; }
+    .view-more .work-row.b figure { width: 72%; justify-self: center; }
+}
